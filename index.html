@@ -5,15 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC&family=Open+Sans:wght@300&display=swap">
+    <script src="./wander.js" defer></script>
     <title>Travel</title>
 </head>
 <body>
 <div class="left-banner">
     <div class="banner"></div>
     <div id="banner-title"><img src="./img/odin-lined.png" id="logo" alt="logo"><h1>Wander</h1></div>
-    <div id="banner-footer"><div class="attribution">Photo by</div>
-    <div class="copyright"></div>CR 2022</div>
+    <div id="banner-footer"><div class="attribution"><a href="https://unsplash.com/photos/AfWViYiG-qw">Photo @julian21</a> </div>
+</div>
 </div>
 
 <div class="content">
@@ -26,22 +27,39 @@
             our Bespoke and Concierge plans. 
         </p>
         <br>
-        <h4 id="wanderers-text">Curated travel planning for <em><b>Wanderers</b></em></h4>
+        <div id="wanderers-info-container"><h4 id="wanderers-text">Curated travel planning for <em><b>Wanderers</b></em></h4><input type="button" id="info-pop" value="More info?"></div>
     
+
+
     </div>
+
+    <div id="infoModal" class="modal">
+    <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <p>
+            <b>This is not a real online service!</b> You know you need something like this in your life to help you realize your deepest dreams.
+            Sign up now to get started.
+            
+            You know you want to.
+            </p>
+    </div>
+
+
+
+        </div>
     <div class="sign-up-form">
-    <form action="">
+        
+    <h2>Let's do this!</h2>
+    <form class="form-container" action="">
 
-    <label for="first_name">First Name<input type="text" name="first_name" id="first_name"></label>
-    <label for="last_name">Last Name<input type="text" name="last_name" id="last_name"></label>
-    <label for="email">Email<input type="email" name="email" id="email"></label>
-    <label for="phone_num">Phone<input type="tel" name="phone_num" id="phone_num"></label>
-    <label for="country">Country<select name="country" id="country">
-        <option value="usa"><option value="canada"></option></select></label>
+    <label class="form-element" for="first_name">first name<input type="text" name="first_name" id="first_name"></label>
+    <label class="form-element" for="last_name">last name<input type="text" name="last_name" id="last_name"></label>
+    <label class="form-element" for="email">email<input type="email" name="email" id="email"></label>
+    <label class="form-element" for="phone_num">phone<input type="tel" name="phone_num" id="phone_num"></label>
+    
 
-
-    <label for="password">Password <input type="password" name="password" id="password"></label>
-    <label for="check_password">Confirm Password <input type="password" name="check_password" id="check_password"></label>
+    <label for="password">password <input type="password" name="password" id="password"></label>
+    <label for="check_password">confirm password <input type="password" name="check_password" id="check_password"></label>
 
     
 
@@ -58,7 +76,7 @@
     </div>
     <div class="buttons"><button class="button" id="create-account">Create Account</button>
     <div id="login-container">
-    <button class="button" id="login">Login</button><p>Already a member?</p>
+    <p>Already a member?</p><button class="button" id="login">Login</button>
     </div>
     
     
