@@ -225,10 +225,8 @@ input:focus{
     outline: 2px solid rgb(124, 131, 228);
 }
 
-input:invalid{
-    outline: 2px rgb(212, 13, 13) solid;
 
-}
+
 
 .error{
 

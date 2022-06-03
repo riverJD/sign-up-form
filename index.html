@@ -22,7 +22,7 @@
         <h3>Don't Holiday, <em>Wander.</em></h3><br>
         <p>Whether you are a solo-traveler or planning for fifteen, 
             we offer <em>customized travel itineraries</em>, planning, and support
-            to fit all of your needs.Choose from several plans carefully
+            to fit all of your needs. Choose from several plans carefully
             crafted by our seasoned travel experts, or go fully custom with 
             our Bespoke and Concierge plans. 
         </p>
@@ -50,16 +50,16 @@
     <div class="sign-up-form">
         
     <h2>Let's do this!</h2>
-    <form class="form-container" action="">
+    <form class="form-container" id="join-form" action="">
 
-    <label class="form-element" for="first_name">first name<input type="text" name="first_name" id="first_name"></label>
-    <label class="form-element" for="last_name">last name<input type="text" name="last_name" id="last_name"></label>
-    <label class="form-element" for="email">email<input type="email" name="email" id="email"></label>
-    <label class="form-element" for="phone_num">phone<input type="tel" name="phone_num" id="phone_num"></label>
+    <label class="form-element" for="first_name">first name<input type="text" name="first_name" id="first_name" required ></label>
+    <label class="form-element" for="last_name">last name<input type="text" name="last_name" id="last_name" required ></label>
+    <label class="form-element" for="email">email<input type="email" name="email" id="email" required ></label>
+    <label class="form-element" for="phone_num">phone<input type="tel" name="phone_num" id="phone_num" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required ></label>
     
 
-    <label for="password">password <input type="password" name="password" id="password"></label>
-    <label for="check_password">confirm password <input type="password" name="check_password" id="check_password"></label>
+    <label for="password">password <input type="password" name="password" id="password" oninvalid="this.setCustomValidity('Please enter a password')"required></label>
+    <label for="check_password">confirm password <input type="password" name="check_password" id="check_password" required oninvalid="this.setCustomValidity('Passwords must match')"></label>
 
     
 
@@ -74,7 +74,7 @@
 
     </form>
     </div>
-    <div class="buttons"><button class="button" id="create-account">Create Account</button>
+    <div class="buttons"><button type="submit" form="join-form" class="button" id="create-account">Create Account</button>
     <div id="login-container">
     <p>Already a member?</p><button class="button" id="login">Login</button>
     </div>
