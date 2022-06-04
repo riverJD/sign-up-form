@@ -55,7 +55,7 @@
     <label class="form-element" for="first_name">first name<input type="text" name="first_name" id="first_name" required ></label>
     <label class="form-element" for="last_name">last name<input type="text" name="last_name" id="last_name" required ></label>
     <label class="form-element" for="email">email<input type="email" name="email" id="email" required oninvalid="addError(this)" onchange="removeError(this)"></label>
-    <label class="form-element" for="phone_num">phone<input type="tel" name="phone_num" id="phone_num" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required ></label>
+    <label class="form-element" for="phone_num">phone<input type="tel" name="phone_num" id="phone_num" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" oninvalid="this.setCustomValidity('Please use proper format: 111-111-1111')" placeholder="123-456-7890" required ></label>
     
 
     <label for="password">password <input type="password" name="password" id="password" oninvalid="this.setCustomValidity('Please enter a password')"required></label>

@@ -35,7 +35,7 @@ function passwordCheck(){
         addError(passverify);
     }
     else {
-        removeError(element);
+        removeError(passverify);
     }
 
 }
