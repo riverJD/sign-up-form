@@ -22,3 +22,28 @@ window.onclick = function(e){
     }
 }
 
+
+
+
+function passwordCheck(){
+
+    const passverify = document.querySelector('#check_password');
+
+    console.log("checking passwords..")
+
+    if (document.querySelector('#password').value != passverify.value){
+        addError(passverify);
+    }
+    else {
+        removeError(element);
+    }
+
+}
+
+function addError(element){
+    element.classList.add('error');
+}
+
+function removeError(element){
+    element.classList.remove('error');
+}
