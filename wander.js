@@ -47,3 +47,16 @@ function addError(element){
 function removeError(element){
     element.classList.remove('error');
 }
+
+
+
+
+const formelements = document.querySelectorAll('.form-element');
+    formelements.forEach(input => {
+        console.log(input);
+    console.log(input.valid)
+    
+        return input.validityState
+    });
+
+    console.log(formelements)
