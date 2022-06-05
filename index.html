@@ -52,14 +52,14 @@
     <h2>Let's do this!</h2>
     <form class="form-container" id="join-form" action="">
 
-    <label class="form-element" for="first_name">first name<input type="text" class="form-element" name="first_name" id="first_name" required ></label>
-    <label class="form-element" for="last_name">last name<input type="text" name="last_name"  class="form-element"  id="last_name" required ></label>
-    <label class="form-element" for="email">email<input type="email" name="email" id="email"  class="form-element"  required oninvalid="addError(this)" onchange="removeError(this)"></label>
-    <label class="form-element" for="phone_num">phone<input type="tel" name="phone_num"  class="form-element" id="phone_num" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" oninvalid="this.setCustomValidity('Please use proper format: 111-111-1111')" placeholder="123-456-7890" required ></label>
+    <label class="form-label" for="first_name">first name<input type="text" class="form-element" name="first_name" id="first_name" required ></label>
+    <label class="form-label" for="last_name">last name<input type="text" name="last_name"  class="form-element"  id="last_name" required ></label>
+    <label class="form-label" for="email">email<input type="email" name="email" id="email"  class="form-element"  required oninvalid="addError(this)" onchange="removeError(this)"></label>
+    <label class="form-label" for="phone_num">phone<input type="tel" name="phone_num"  class="form-element" id="phone_num" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" maxlength="12" oninvalid="this.setCustomValidity('Please use proper format: 111-111-1111')" placeholder="123-456-7890" required ></label>
     
 
-    <label for="password">password <input type="password" name="password" id="password"  class="form-element" oninvalid="this.setCustomValidity('Please enter a password')"required></label>
-    <label for="check_password">confirm password <input type="password" name="check_password"  class="form-element" id="check_password" required oninvalid="this.setCustomValidity('Passwords must match')" oninput="passwordCheck()"></label>
+    <label class="form-label" for="password">password <input type="password" name="password" id="password"  class="form-element" oninvalid="this.setCustomValidity('Please enter a password')"required></label>
+    <label class="form-label" for="check_password">confirm password <input type="password" name="check_password"  class="form-element" id="check_password" required oninvalid="this.setCustomValidity('Passwords must match')" oninput="passwordCheck()"></label>
 
     
 

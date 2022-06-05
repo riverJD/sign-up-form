@@ -269,6 +269,7 @@ input:focus{
 .inactive{
     opacity: 60%;
     background-color: #868686;
+    pointer-events: none;
 }
 
 
@@ -279,9 +280,7 @@ input:focus{
         font-size: .75rem;
     }
 
-    .sign-up-form{
 
-    }
 
     .buttons{
         max-height: 10%;
