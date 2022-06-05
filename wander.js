@@ -22,9 +22,7 @@ window.onclick = function(e){
     }
 }
 
-
-
-
+// Verify password and confirm password are same
 function passwordCheck(){
 
     const passverify = document.querySelector('#check_password');
@@ -32,17 +30,17 @@ function passwordCheck(){
     console.log("checking passwords..")
 
     if (document.querySelector('#password').value != passverify.value){
+        passverify.setCustomValidity('Passwords must match.')
         addError(passverify);
     }
     else {
+        passverify.setCustomValidity('')
         removeError(passverify);
     }
 
 }
 
-let formValueCheck = [];
-
-
+// Automatically remove non-numerics and place dashes 
 const phoneFormater = document.querySelector('#phone_num');
 phoneFormater.addEventListener('keyup', (e) => {
 
@@ -50,7 +48,7 @@ phoneFormater.addEventListener('keyup', (e) => {
     let phoneNumber = phoneFormater.value.replace(/\D/g,'');
     
     let inputSize = phoneNumber.length;
-
+    console.log(phoneFormater.ValidityState)
     // Ignore delete/backspace so user can delete number 
     if (e.key == 'Backspace' || e.key == 'Delete') return;
     
@@ -64,14 +62,17 @@ phoneFormater.addEventListener('keyup', (e) => {
 
 
     phoneFormater.value = phoneNumber;
+    phoneFormater.setCustomValidity('');
 })
+
+let formValueCheck = [];
 
 // If an input is valid, add its value to an array
 const formelements = document.querySelectorAll('.form-element');
 
     formelements.forEach(input => {
         input.addEventListener('change', () => {
-            console.log('change')
+            console.log(input.reportValidity())
             if (input.checkValidity()){
                 console.log('valid')
             formValueCheck[input.name] = input.value;
