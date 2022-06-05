@@ -17,7 +17,6 @@ window.onclick = function(e){
     if (e.target == modal) 
     
     {
-        console.log('close');
         modal.style.display = 'none';
     }
 }
@@ -27,7 +26,6 @@ function passwordCheck(){
 
     const passverify = document.querySelector('#check_password');
 
-    console.log("checking passwords..")
 
     if (document.querySelector('#password').value != passverify.value){
         passverify.setCustomValidity('Passwords must match.')
@@ -48,7 +46,6 @@ phoneFormater.addEventListener('keyup', (e) => {
     let phoneNumber = phoneFormater.value.replace(/\D/g,'');
     
     let inputSize = phoneNumber.length;
-    console.log(phoneFormater.ValidityState)
     // Ignore delete/backspace so user can delete number 
     if (e.key == 'Backspace' || e.key == 'Delete') return;
     
@@ -72,9 +69,7 @@ const formelements = document.querySelectorAll('.form-element');
 
     formelements.forEach(input => {
         input.addEventListener('change', () => {
-            console.log(input.reportValidity())
             if (input.checkValidity()){
-                console.log('valid')
             formValueCheck[input.name] = input.value;
             verifyForm();
             }
